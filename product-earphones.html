@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Audiophile e-commerce website</title>
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+  }
+
+    .content{
+      display: flex;
+      justify-content: space-around;
+      background-color: black;
+     height: 100px;
+      
+    }
+
+
+    .content   div{
+     margin-top: 40px;
+      
+    }
+
+
+    .hrefs{
+      display: flex;
+      gap: 12px;
+    
+    }
+
+    .hrefs a{
+       color:rgb(233, 233, 233);
+        text-decoration: none;
+          font-weight: bolder;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+    }
+
+
+    .hrefs a:hover{
+       color:rgb(170, 71, 71);
+      
+    }
+
+    .products{
+      margin-top: 50px;
+    }
+
+    .cart-count-badge {
+  position: relative;
+  top: -10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: none;
+  z-index: 10;
+}
+
+.features{
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  align-items: center;
+}
+
+
+.middle{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+
+.colim{
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+}
+
+
+.product{
+  display: flex;
+  gap: 120px;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .graycontainers{
+      display: flex;
+      margin-top: 150px;
+        gap:15px;
+        text-align: center;
+        align-items: center;
+        margin-left: 100px;
+      
+    }
+
+    .boxx{
+      width: 430px;
+      padding: 8px;
+      height: 180px;
+      padding-bottom: 30px;
+      margin-top: 50px;
+      align-items: center;
+      background-color: rgba(228, 227, 227, 0.4);
+      border-radius: 10px;
+      padding-top: 30px;
+      position: relative;
+    }
+
+
+    .boxx h1{
+         margin-bottom: 20px;
+    }
+
+
+   
+    
+
+     .boxx img{
+     width: 200px;
+     height: 180px;
+     margin-top: -60px;
+    }
+
+                                                                                                                                                                                                                                        
+
+    .shop {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #D87D4A;
+        font-weight: bold;
+        letter-spacing: 1px;
+        
+      }
+
+.arrow {
+  margin-left: 8px;
+}
+
+
+    .boxx span{
+      color: orangered;
+    }
+
+
+    .prelast{
+    display: flex;
+    gap: 150px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .prelast img{
+         width: 600px;
+         height: 600px;
+         border-radius: 10px;
+   }
+
+
+   .pretext{
+       padding: 20px;
+       display: flex;
+       flex-direction: column;
+       gap: 30px;
+   }
+
+   .pretext p {
+    color: rgb(142, 142, 142);
+   }
+
+   .pretext span{
+       color:rgb(214, 114, 51);
+   }
+
+
+
+   footer{
+    margin-top: 120px;
+    background: black;
+    width: 100%;
+    bottom:0;
+    height: 400px;
+    
+   }
+
+
+   .footflex{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    align-items: center;
+   padding-top: 120px;
+    
+   }
+
+
+   .coll   img{
+          padding: 16px;
+         
+   }
+
+
+
+   .footflex p{
+      color: gray;
+   }
+
+
+   .colun{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   }
+
+   .imgs{
+    margin-top: 80px;
+    margin-left: 280px;
+    display: flex;
+    gap: 15px;
+   }
+
+
+    .on{
+      background: none;
+      border: none;
+    }
+
+
+
+
+</style>
+
+<body>
+   <div class="content">
+              <div class="logo">
+                <img src="assets/shared/desktop/logo.svg">
+              </div>
+
+              <div class="hrefs">
+                    <a href="index.html"> Home</a>
+                    <a href="headphones.html"> Headphones</a>
+                    <a href="speakers.html"> Speakers</a>
+                    <a href="earphones.html">Earphones</a>
+              </div>
+
+              <div >
+                 <button  class="on"><img src="assets/shared/desktop/icon-cart.svg"></button>
+                      <span class="cart-count-badge" 
+                       
+                     >0</span>
+              </div>
+
+       </div>
+
+
+
+       <div class="cart-container" style="position: fixed; top: 60px; right: 20px; width: 300px; background: white; border: 1px solid gray; padding: 20px; display: none;">
+  <h3>Your Cart</h3>
+  <button id="close-cart" style="background: none; border: none; font-size: 18px; cursor: pointer;">✖</button>
+  <div class="cart-items"></div>
+</div>
+
+
+       <div class="products">
+
+       </div>
+
+
+       <div class="features">
+            <div>
+                  <h1>Features</h1>
+
+                  <p  style ="width: 700px; margin-top: 20px;">featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat. The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and a modern design aesthetic.</p>
+            </div>
+
+
+            <div>
+                  <h1>In the  box</h1>
+                  <ul  style =" margin-top: 20px;">
+                    <li>Headphone unit</li>
+                     <li>Headphone unit</li>
+                      <li>Headphone unit</li>
+                       <li>Headphone unit</li>
+                        <li>Headphone unit</li>
+                     
+                  </ul>
+            </div>
+          
+       </div>
+
+
+
+       <div class="middle">
+           <div class="colim">
+                 <img src="assets/product-yx1-earphones/desktop/image-gallery-1.jpg">
+                 <img src="assets/product-yx1-earphones/desktop/image-gallery-2.jpg">
+           </div>
+
+
+           <div>
+            <img src="assets/product-yx1-earphones/desktop/image-gallery-3.jpg" height="560px">
+           </div>
+       </div>
+
+
+
+       <h1 style = "text-align: center;margin-top: 100px;">YOU MAY  ALSO LIKE</h1>
+
+       <div class="product">
+
+       </div>
+
+
+        <div class="graycontainers">
+      <div class="boxx">
+        <img src="assets/shared/desktop/image-category-thumbnail-headphones.png">
+        <h1>Headphones</h1>
+        <a class="shop" href="headphones.html">shop<span> ></span></a> 
+      </div>
+
+      <div class="boxx">
+        <img src="assets/shared/desktop/image-category-thumbnail-earphones.png">
+        <h1>Earphones</h1>
+        <a class="shop" href="earphones.html">shop<span> ></span></a> 
+      </div>
+
+      <div class="boxx">
+        <img src="assets/shared/desktop/image-category-thumbnail-speakers.png">
+        <h1>Speakers</h1>
+        <a class="shop" href="speakers.html">shop<span> ></span></a> 
+      </div>
+
+    </div>
+
+
+     <div class="prelast">
+    <div class="pretext">
+      <h1>Lorem ipsum dolor<br><span>sit </span> amet consectetur.</h1>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Repudiandae praesentium sit eaque nisi, quis <br>> inventore at porro animi, neque quibusdam temporibus cum <br>aliquid optio iusto consequatur asperiores veniam unde magni,<br> hic deleniti quod quos libero nulla! Quis repellat<br> quasi accusantium quae similique aut! Aspernatur velit cupiditate <br>sed doloremque, nesciunt quae adipisci tempora soluta ipsa   <br> voluptatum. Nesciunt, fugit? Fugit tempore ab numquam beatae hic<br> libero enim quod rerum veritatis voluptatem.</p>
+      
+      <p></p>
+    </div>
+
+    <div>
+      <img src="assets/shared/desktop/image-best-gear.jpg">
+    </div>
+  </div>
+
+
+
+
+
+  <footer>
+
+
+    <div class="footflex">
+        
+         <div class="coll">
+              <img src="assets/shared/desktop/logo.svg">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ut aliquam deserunt alias porro inventore dolorum <br>incidunt, repudiandae sapiente corporis atque provident labore, ea impedit vero vel officiis aperiam. Laboriosam rem labore <br> dolor veritatis animi voluptate quae, numquam distinctio quam nisi repudiandae facere amet ex, alias tempore aliquam.</p>
+              <p>Copyright2021.ALL RIGHTS RESERVED</p>
+         </div>
+
+            <div class="colun">
+                    <div>
+                              <div class="hrefs">
+                                <a href="#"> Home</a>
+                                <a href="#"> Headphones</a>
+                                <a href="#"> Speakers</a>
+                                <a href="#">Earphones</a>
+                          </div>
+
+
+
+                          <div class="imgs">
+                              <img src="assets/shared/desktop/icon-facebook.svg">
+                                <img src="assets/shared/desktop/icon-instagram.svg">
+                                <img src="assets/shared/desktop/icon-twitter.svg">
+                          </div>
+                    </div>
+            </div>
+                    
+
+    </div>
+      
+  </footer>
+
+
+
+
+  
+
+
+
+
+
+       <script>
+         const headphones = [
+      {
+        name: "YX1 Wireless Earphones",
+        image: "./assets/product-yx1-earphones/desktop/image-product.jpg",
+        description:
+          "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+        price: 599,
+      },
+    ];
+
+    const productsSection = document.querySelector(".products");
+    const cartContainer = document.querySelector(".cart-container");
+    const cartItemsDiv = document.querySelector(".cart-items");
+    const cartBtn = document.querySelector(".on");
+    let cart = [];
+
+    // Toggle cart view
+    cartBtn.addEventListener("click", () => {
+      cartContainer.style.display =
+        cartContainer.style.display === "none" ? "block" : "none";
+    });
+
+    // Render product
+    headphones.forEach((product) => {
+      let count = 0;
+
+      const productDiv = document.createElement("div");
+      productDiv.className = "product1 pro";
+      productDiv.style =
+        "display: flex; align-items: center; justify-content: space-between; padding: 50px 80px; gap: 40px;";
+
+      productDiv.innerHTML = `
+        <div class="left">
+          <img src="${product.image}" alt="${product.name}" style="width: 500px; border-radius: 10px;">
+        </div>
+        <div class="right" style="max-width: 500px; color: black;">
+          <h2 style="font-size: 32px; font-weight: bold; margin: 10px 0;">${product.name}</h2>
+          <p style="color: gray; margin: 20px 0; line-height: 1.6;">${product.description}</p>
+          <p style="color: black;font-size:20px; margin: 20px 0;">$${product.price}</p>
+
+          <div style="display:flex;gap:15px">
+            <div style="background-color:gray;height:40px;width:120px;display:flex;align-items:center;justify-content:space-around;padding:8px">
+              <p class="minus" style="cursor:pointer">-</p>
+              <h3 class="count">${count}</h3>
+              <p class="plus" style="cursor:pointer">+</p>
+            </div>
+            <button class="cart-btn" style="background-color:orange;color:white;width:150px;height:55px;padding:8px;border:none;">ADD TO CART</button>
+          </div>
+        </div>
+      `;
+
+      productsSection.appendChild(productDiv);
+
+      const minusBtn = productDiv.querySelector(".minus");
+      const plusBtn = productDiv.querySelector(".plus");
+      const countEl = productDiv.querySelector(".count");
+      const addBtn = productDiv.querySelector(".cart-btn");
+
+      plusBtn.addEventListener("click", () => {
+        count++;
+        countEl.textContent = count;
+      });
+
+      minusBtn.addEventListener("click", () => {
+        if (count > 0) {
+          count--;
+          countEl.textContent = count;
+        }
+      });
+
+      addBtn.addEventListener("click", () => {
+        if (count === 0) {
+          alert("⚠️ You need to add at least one item.");
+          return;
+        }
+
+        const existing = cart.find((item) => item.name === product.name);
+        if (existing) {
+          existing.quantity += count;
+        } else {
+          cart.push({
+            name: product.name,
+            image: product.image,
+            price: product.price,
+            quantity: count,
+          });
+        }
+
+        count = 0;
+        countEl.textContent = count;
+
+        // Update cart UI
+        cartItemsDiv.innerHTML = "";
+        cart.forEach((item) => {
+          const total = item.quantity * item.price;
+          cartItemsDiv.innerHTML += `
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <img src="${item.image}" style="width:60px;height:60px;object-fit:cover;border-radius:5px;">
+              <div>
+                <strong>${item.name}</strong><br>
+                ${item.quantity} × $${item.price} = <strong>$${total}</strong>
+              </div>
+            </div>
+          `;
+        });
+         updateCartBadge();
+      });
+
+     
+    });
+
+
+    const closeCartBtn = document.getElementById("close-cart");
+
+closeCartBtn.addEventListener("click", () => {
+  cartContainer.style.display = "none";
+});
+
+
+const cartCountBadge = document.querySelector(".cart-count-badge");
+
+function updateCartBadge() {
+  let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  if (totalItems > 0) {
+    cartCountBadge.style.display = "inline-block";
+    cartCountBadge.textContent = totalItems;
+  } else {
+    cartCountBadge.style.display = "none";
+  }
+}
+
+
+
+
+
+
+
+const relatedHeadphones =  [
+    {
+      name: "XX99 Mark I",
+      image: "./assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
+      description: "Experience unrivaled sound quality with the XX99 Mark II Headphones, designed for audiophiles seeking the ultimate listening experience.",
+       link: "product-xx99-mark-one-headphones.html"
+    },
+    {
+      name: "XX59",
+      image: "./assets/product-xx59-headphones/mobile/image-product.jpg",
+      description: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+       link: "product-xx59-headphones.html"
+    },
+    {
+      name: "ZX9 SPEAKER ",
+      image: "./assets/shared/desktop/image-zx9-speaker.jpg",
+      description: "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
+       link: "product-zx9-speaker.html"
+    }
+  ];
+
+
+  const relatedProductsSection = document.querySelector('.product');
+
+  relatedHeadphones.forEach((product, index) => {
+    const productHTML = `
+      <div class="product1 pro" style="display: flex; flex-direction:column; justify-content:center; align-items: center; gap:20px;">
+        <div class="left${index + 1}">
+          <img src="${product.image}" alt="${product.name}" style="width: 300px; border-radius: 10px;">
+        </div>
+        <div class="right${index + 1}" style="max-width: 300px; color: black;">
+          ${product.isNew ? '<p style="color: orange; letter-spacing: 5px; font-size: 14px;">NEW PRODUCT</p>' : ''}
+          <h2 style="font-size: 32px; font-weight: bold; margin: 10px 0;">${product.name}</h2>
+          <a href="${product.link}" style="display: inline-block; padding: 12px 32px; background-color: orange; color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 14px;">See Product</a>
+        </div>
+      </div>
+    `;
+    relatedProductsSection.innerHTML += productHTML;
+  });
+
+
+
+
+
+    
+  </script>
+</body>

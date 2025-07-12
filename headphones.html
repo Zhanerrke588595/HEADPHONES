@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Audiophile e-commerce website</title>
+</head>
+
+
+<style>
+
+
+
+   *{
+    padding: 0;
+    margin: 0;
+  }
+
+    .content{
+      display: flex;
+      justify-content: space-around;
+      background-color: black;
+     height: 330px;
+      
+    }
+
+
+    .content   div{
+     margin-top: 40px;
+      
+    }
+
+
+    .hrefs{
+      display: flex;
+      gap: 12px;
+    
+    }
+
+    .hrefs a{
+       color:rgb(233, 233, 233);
+        text-decoration: none;
+          font-weight: bolder;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+    }
+
+
+    .hrefs a:hover{
+       color:rgb(170, 71, 71);
+      
+    }
+.hr {
+  margin-top: -220px;
+  width: 80%;
+  border: none;
+  border-top: 1px solid rgb(145, 145, 145);
+  text-align: center;
+  margin-left: 150px;
+}
+
+
+.head{
+     color: white;
+     position: absolute;
+     margin-top: 200px;
+     text-align: center;
+     
+}
+
+
+
+.headCONTAINERS{
+     display: flex;
+     flex-direction: column;
+     gap: 60px;
+}
+
+.products{
+  margin-top: 250px;
+}
+
+
+
+ .prelast{
+    display: flex;
+    gap: 150px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .prelast img{
+         width: 600px;
+         height: 600px;
+         border-radius: 10px;
+   }
+
+
+   .pretext{
+       padding: 20px;
+       display: flex;
+       flex-direction: column;
+       gap: 30px;
+   }
+
+   .pretext p {
+    color: rgb(142, 142, 142);
+   }
+
+   .pretext span{
+       color:rgb(214, 114, 51);
+   }
+
+
+
+   footer{
+    margin-top: 120px;
+    background: black;
+    width: 100%;
+    bottom:0;
+    height: 400px;
+    
+   }
+
+
+   .footflex{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    align-items: center;
+   padding-top: 120px;
+    
+   }
+
+
+   .coll   img{
+          padding: 16px;
+         
+   }
+
+
+
+   .footflex p{
+      color: gray;
+   }
+
+
+   .colun{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   }
+
+   .imgs{
+    margin-top: 80px;
+    margin-left: 280px;
+    display: flex;
+    gap: 15px;
+   }
+
+
+    .graycontainers{
+      display: flex;
+      margin-top: 150px;
+        gap:15px;
+        text-align: center;
+        align-items: center;
+        margin-left: 100px;
+      
+    }
+
+    .boxx{
+      width: 430px;
+      padding: 8px;
+      height: 180px;
+      padding-bottom: 30px;
+      margin-top: 50px;
+      align-items: center;
+      background-color: rgba(228, 227, 227, 0.4);
+      border-radius: 10px;
+      padding-top: 30px;
+      position: relative;
+    }
+
+
+    .boxx h1{
+         margin-bottom: 20px;
+    }
+
+
+   
+    
+
+     .boxx img{
+     width: 200px;
+     height: 180px;
+     margin-top: -60px;
+    }
+
+                                                                                                                                                                                                                                        
+
+    .shop {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #D87D4A;
+        font-weight: bold;
+        letter-spacing: 1px;
+        
+      }
+
+.arrow {
+  margin-left: 8px;
+}
+
+
+    .boxx span{
+      color: orangered;
+    }
+
+ .on{
+      background: none;
+      border: none;
+    }
+    
+
+
+
+
+
+</style>
+
+<body>
+         <div class="content">
+              <div class="logo">
+                <img src="assets/shared/desktop/logo.svg">
+              </div>
+
+              <div class="hrefs">
+                    <a href="index.html"> Home</a>
+                    <a href="headphones.html"> Headphones</a>
+                    <a href="speakers.html"> Speakers</a>
+                    <a href="earphones.html">Earphones</a>
+              </div>
+
+              <div >
+                <button  class="on"><img src="assets/shared/desktop/icon-cart.svg"></button>
+              </div>
+
+
+              <h1 class="head">HEADPHONES</h1>
+       </div>
+
+
+       <hr class="hr">
+
+
+
+     <div class="products">
+
+     </div>
+
+
+     <div class="graycontainers">
+      <div class="boxx">
+        <img src="assets/shared/desktop/image-category-thumbnail-headphones.png">
+        <h1>Headphones</h1>
+        <a class="shop" href="headphones.html">shop<span> ></span></a> 
+      </div>
+
+      <div class="boxx">
+        <img src="assets/shared/desktop/image-category-thumbnail-earphones.png">
+        <h1>Earphones</h1>
+        <a class="shop" href="earphones.html">shop<span> ></span></a> 
+      </div>
+
+      <div class="boxx">
+        <img src="assets/shared/desktop/image-category-thumbnail-speakers.png">
+        <h1>Speakers</h1>
+        <a class="shop" href="speakers.html">shop<span> ></span></a> 
+      </div>
+
+    </div>
+  
+
+
+
+
+
+
+      <div class="prelast">
+    <div class="pretext">
+      <h1>Lorem ipsum dolor<br><span>sit </span> amet consectetur.</h1>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Repudiandae praesentium sit eaque nisi, quis <br>> inventore at porro animi, neque quibusdam temporibus cum <br>aliquid optio iusto consequatur asperiores veniam unde magni,<br> hic deleniti quod quos libero nulla! Quis repellat<br> quasi accusantium quae similique aut! Aspernatur velit cupiditate <br>sed doloremque, nesciunt quae adipisci tempora soluta ipsa   <br> voluptatum. Nesciunt, fugit? Fugit tempore ab numquam beatae hic<br> libero enim quod rerum veritatis voluptatem.</p>
+      
+      <p></p>
+    </div>
+
+    <div>
+      <img src="assets/shared/desktop/image-best-gear.jpg">
+    </div>
+  </div>
+
+
+
+
+
+  <footer>
+    <div class="footflex">
+         <div class="coll">
+              <img src="assets/shared/desktop/logo.svg">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ut aliquam deserunt alias porro inventore dolorum <br>incidunt, repudiandae sapiente corporis atque provident labore, ea impedit vero vel officiis aperiam. Laboriosam rem labore <br> dolor veritatis animi voluptate quae, numquam distinctio quam nisi repudiandae facere amet ex, alias tempore aliquam.</p>
+              <p>Copyright2021.ALL RIGHTS RESERVED</p>
+         </div>
+
+                <div class="colun">
+                            <div>
+                                <div class="hrefs">
+                                  <a href="#"> Home</a>
+                                  <a href="#"> Headphones</a>
+                                  <a href="#"> Speakers</a>
+                                  <a href="#">Earphones</a>
+                              </div>
+
+                              <div class="imgs">
+                                  <img src="assets/shared/desktop/icon-facebook.svg">
+                                  <img src="assets/shared/desktop/icon-instagram.svg">
+                                  <img src="assets/shared/desktop/icon-twitter.svg">
+                              </div>
+                       </div>
+                   </div>
+     </div>
+  </footer>
+
+
+
+
+    <script>
+  const headphones =  [
+    {
+      name: "XX99 Mark II Headphones",
+      image: "./assets/product-xx99-mark-two-headphones/desktop/image-product.jpg",
+      description: "Experience unrivaled sound quality with the XX99 Mark II Headphones, designed for audiophiles seeking the ultimate listening experience.",
+       link: "product-xx99-mark-two-headphones.html"
+    },
+    {
+      name: "XX59 Headphones",
+      image: "./assets/product-xx59-headphones/mobile/image-product.jpg",
+      description: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+       link: "product-xx59-headphones.html"
+    },
+    {
+      name:  "XX99 Mark I Headphones",
+      image: "./assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
+      description: "The new XX99 Mark I headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
+       link: "product-xx99-mark-one-headphones.html"
+    }
+  ];
+
+
+  const productsSection = document.querySelector('.products');
+
+  for (let i = 0; i < headphones.length; i++) {
+  const product = headphones[i];
+
+ const  productHTML = `
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 50px 80px; gap: 40px;">
+      <div >
+        <img src="${product.image}" alt="${product.name}" style="width: 500px; border-radius: 10px;">
+      </div>
+      <div  style="max-width: 500px; color: black;">
+        <h2 style="font-size: 32px; font-weight: bold; margin: 10px 0;">${product.name}</h2>
+        <p style="color: gray; margin: 20px 0; line-height: 1.6;">${product.description}</p>
+        <a href="${product.link}" style="display: inline-block; padding: 12px 32px; background-color: orange; color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 14px;">See Product</a>
+      </div>
+    </div>
+  `;
+
+  productsSection.innerHTML += productHTML;
+}
+
+  </script>
+       
+</body>
+</html>
